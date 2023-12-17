@@ -1,0 +1,7 @@
+.gap {
+    gap: 20px;
+}
+
+.rounded-img {
+    clip-path: circle();
+}
