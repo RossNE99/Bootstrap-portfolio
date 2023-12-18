@@ -11,6 +11,15 @@ html {
     scroll-behavior: smooth;
   }
 
+body {
+    background-color: var(--seccondry-color);
+    color: var(--text-color);
+}
+
+span {
+    color: var(--primary-color);
+}
+
 
 /* Style for link elements */
 a {
@@ -44,6 +53,46 @@ a {
 .rounded-img {
     clip-path: circle();
 }
+
+.jumbotron{
+    background-color: rgb(77, 77, 77, 0.3);
+    padding: 30px 5% 30px 5%;
+}
+
+.jumbotron img {
+    width: 70%;
+    max-width: 400px;
+}
+
+
+/* Navigation styling */
+nav {
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+  }
+  
+  /* Styling for navigation icons */
+  nav img {
+    max-width: 50px;
+    max-height: 50px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    border:#fff solid 2px;
+    transition: box-shadow .3s;
+  }
+
+  nav img:hover {
+    box-shadow: 0 0 11px rgb(255, 255, 255); 
+  }
 
 
 /* Styling for progress bar contaier within about me section */
@@ -148,4 +197,22 @@ a {
     #about-me {
         max-width: 1300px;
     }
+}
+
+@media only screen and (max-width: 658px) {
+
+    nav {
+      top: auto;
+      bottom: 0;
+      flex-direction: row;
+      justify-content: space-around;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 95%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+      border-radius: 90px;
+      margin: 0px 0px 10px 0px;
+      z-index: 200;
+      }
 }
