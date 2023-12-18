@@ -55,7 +55,8 @@ a {
 }
 
 .jumbotron{
-    background-color: rgb(77, 77, 77, 0.3);
+    margin-top: 2vh;
+    background-color: rgba(30, 30, 30, 0.5);
     padding: 30px 5% 30px 5%;
 }
 
@@ -174,6 +175,11 @@ nav {
     overflow: hidden;
     border-radius: var(--card-border-radious) ;
     min-height: 270px;
+    transition: transform .3s; /* Animation */
+}
+
+.CardImgContainer:hover {
+  transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .CardImgContainer img {
@@ -191,6 +197,26 @@ nav {
     min-height: 80px;
     text-align: center;
     border-top: var(--primary-color) solid 5px;
+}
+
+.iconHover img {
+  transition: transform .4s; /* Animation */
+  transition: margin-inline .4s; /* Animation */
+}
+
+.iconHover img:hover {
+  transform: scale(1.2);
+  margin-inline: 10px;
+}
+
+nav img {
+  transition: transform .4s; /* Animation */
+  transition: margin-block .4s; /* Animation */
+}
+
+nav img:hover {
+  transform: scale(1.4);
+  margin-block: 10px;
 }
 
 @media only screen and (min-width: 1200px){ /* Makes content look better on wider screens. overid bootstrap default. applys to everything in main  */
