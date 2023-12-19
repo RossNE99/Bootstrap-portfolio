@@ -36,7 +36,7 @@ To get the development environment running:
 There is no special requirements for end users. Simply visit [here](https://rossne99.github.io/Bootstrap-portfolio/) to view the webpage.
 
 ## Features
-- **Fully Responsive:** This webpage uses media querys to ensure that the content fits on any screen size.
+- **Fully Responsive:** This webpage uses bootstrap brakepoints to ensure that the content fits on any screen size.
 - **Robust Layout:** Grid and flexbox has been used inorder to make sure all elements stay formatted correctly.
 - **Fixed Navber:** The navbar is now fixed to the top of the page this is useful for accessibility additionally all the links in the nav bar now work.
 - **Links to Previous Projets:** All featured applcations link to the deployed page.
