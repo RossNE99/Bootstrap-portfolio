@@ -59,7 +59,7 @@ There is no special requirements for end users. Simply visit [here](https://ross
 
 The following image shows the web application's appearance and functionality:
 
-![Full Width Screenshot](assets/images/FullWidthScreenshot.jpeg)
+![Full Width Screenshot](images/FullWidthScreenshot.jpeg)
 
 > **Note**: This layout is designed to be fully responive.
 
