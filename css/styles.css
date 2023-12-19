@@ -51,7 +51,13 @@ a {
   /* Bootstrap Overrides */
 
   .btn-primary {
+    transition: transform 0.6s; /* Animation */
     background-color: var(--primary-color) !important;
+  }
+
+  .btn-primary:hover{
+    box-shadow: 9px 7px 15px rgba(0, 0, 0, 1); 
+    transform: scale(1.1);
   }
   
   .bg-dark {
@@ -293,6 +299,15 @@ nav {
     }
 }
 
+@media only screen and (max-width: 991px) { /* CSS overrides for section titles for medium view */
+    .section-title {
+        border-right: none;
+        border-bottom: var(--primary-color) solid 5px;
+        margin-bottom: 20px;
+        margin-inline: 20px;
+    }
+}
+
 @media only screen and (max-width: 658px) { /* CSS overrides for mobile view */
 
     nav {
@@ -320,14 +335,6 @@ nav {
         transform: scale(1.2);
         margin-block: 2px;
       }
-
-      .section-title {
-          border-right: none;
-          border-bottom: var(--primary-color) solid 5px;
-          margin-bottom: 20px;
-          margin-inline: 20px;
-      }
-
 
       .footer {
         height: 120px;
