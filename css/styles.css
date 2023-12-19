@@ -4,6 +4,7 @@
     --seccondry-color-darker:#353535; /* Darker shade of secondary color */
     --text-color: #fff; /* Text color */
     --card-border-radious: 20px;  /* Border radius for cards */
+    --trasparent-background: rgba(30, 30, 30, 0.5);
   }
 
 /* Smooth scrolling behavior for the entire HTML document */
@@ -46,29 +47,70 @@ a {
     font-size: 30px;
   }
 
+
+  /* Bootstrap Overrides */
+
+  .btn-primary {
+    background-color: var(--primary-color) !important;
+  }
+  
+  .bg-dark {
+    background-color: var(--trasparent-background) !important;
+  }
+
+  .container {
+    min-height: 110vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .jumbotron{
+      margin-top: 2vh;
+      background-color: var(--trasparent-background) !important;
+      padding: 30px 5% 30px 5%;
+  }
+  
+  .jumbotron img {
+      width: 70%;
+      max-width: 400px;
+  }
+  
+  .badge {
+    display:flex;
+    font-size: 100%;
+    font-weight: 480;
+  }
+  
+  .badge-primary {
+    background-color: var(--primary-color);
+  
+    transition: transform 0.6s; /* Animation */
+  }
+  
+  .badge-primary:hover {
+    box-shadow: 9px 7px 15px rgba(0, 0, 0, 1); 
+    transform: scale(1.1);
+  }
+
+
+
+/* Custom CSS until classes */
+
 .gap {
     gap: 10px;
+    min-width: 85px;
+}
+
+.gap a {
+  max-height: 100px;
 }
 
 .rounded-img {
     clip-path: circle();
 }
 
-.container {
-  min-height: 110vh;
-  display: flex;
-  align-items: center;
-}
-
-.jumbotron{
-    margin-top: 2vh;
-    background-color: rgba(30, 30, 30, 0.5);
-    padding: 30px 5% 30px 5%;
-}
-
-.jumbotron img {
-    width: 70%;
-    max-width: 400px;
+.minWidth100 {
+  min-width: 100%;
 }
 
 
@@ -109,6 +151,13 @@ nav {
   nav img:hover {
     box-shadow: 0 0 11px rgb(255, 255, 255); 
   }
+
+
+
+  .section-title {
+    border-right: var(--primary-color) solid 5px;
+  }
+
 
 
 /* Styling for progress bar contaier within about me section */
@@ -184,6 +233,9 @@ nav {
     max-width: 85.5px;
 }
 
+
+/* my work section css */
+
 .CardImgContainer {
     max-height: 70vh;
     height: 100%; 
@@ -194,7 +246,7 @@ nav {
 }
 
 .CardImgContainer:hover {
-  transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.03); /* hover effect  */
 }
 
 .CardImgContainer img {
@@ -202,10 +254,6 @@ nav {
     object-position: top;
     width: 100%;  
     height: 100%;
-}
-
-.minWidth100 {
-  min-width: 100%;
 }
 
 .CardTextOverlay {
@@ -228,13 +276,24 @@ nav {
   margin-inline: 10px;
 }
 
+/* footer css */
+
+.footer {
+  height:60px
+}
+
+.footer a {
+  display: flex;
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 1200px){ /* Makes content look better on wider screens. overid bootstrap default. applys to everything in main  */
     #about-me {
         max-width: 1300px;
     }
 }
 
-@media only screen and (max-width: 658px) {
+@media only screen and (max-width: 658px) { /* CSS overrides for mobile view */
 
     nav {
       top: auto;
@@ -260,5 +319,17 @@ nav {
       nav img:hover {
         transform: scale(1.2);
         margin-block: 2px;
+      }
+
+      .section-title {
+          border-right: none;
+          border-bottom: var(--primary-color) solid 5px;
+          margin-bottom: 20px;
+          margin-inline: 20px;
+      }
+
+
+      .footer {
+        height: 120px;
       }
 }
